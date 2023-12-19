@@ -1,0 +1,14 @@
+version: "3"
+services:
+  selenium:
+    image: seleniarm/standalone-chromium
+    ports:
+      - 4444:4444
+      - 5901:5900
+  app:
+    build: ./
+    volumes:
+      - ./products_monitoring_web_scraper/src:/src
+    ports:
+      - "8000:8000"
+    tty: true

@@ -1,0 +1,3 @@
+services:
+  # A Web Scraper
+  - type: web
